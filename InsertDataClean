@@ -1,0 +1,57 @@
+use FarmAppDB
+GO
+
+SET IDENTITY_INSERT City ON;
+INSERT INTO [dbo].[City] ([CityID], [City], [State], [Country], [ZipCode])
+VALUES 
+    (01, 'New York City', 'New York', 'USA', 10001),
+    (02, 'Los Angeles', 'California', 'USA', 90001),
+    (03, 'Chicago', 'Illinois', 'USA', 60601),
+    (04, 'Houston', 'Texas', 'USA', 77001),
+    (05, 'Miami', 'Florida', 'USA', 33101);
+SET IDENTITY_INSERT City OFF;
+GO
+
+SET IDENTITY_INSERT [User] ON;
+INSERT INTO [dbo].[User] ([UserID], [CityID], [UserName], [FarmType])
+VALUES
+    (101, 01, 'John Doe', 'Dairy'),
+    (102, 02, 'Jane Smith', 'Vegetables'),
+    (103, 03, 'Bob Johnson', 'Meat'),
+    (104, 04, 'Alice Brown', 'Dairy'),
+    (105, 05, 'Charlie Davis', 'Vegetables');
+SET IDENTITY_INSERT [User] OFF;
+GO
+
+SET IDENTITY_INSERT Hurricane ON;
+INSERT INTO [dbo].[Hurricane] ([HurricaneID], [HurricaneName])
+VALUES
+    (1001, 'Hurricane A'),
+    (1002, 'Hurricane B'),
+    (1003, 'Hurricane C'),
+    (1004, 'Hurricane D'),
+    (1005, 'Hurricane E');
+SET IDENTITY_INSERT Hurricane OFF;
+GO
+
+SET IDENTITY_INSERT Seed ON;
+INSERT INTO [dbo].[Seed] ([SeedID], [SeedName], [IdealPlantTemp])
+VALUES
+    (11, 'Seed A', '70-80°F'),
+    (12, 'Seed B', '60-70°F'),
+    (13, 'Seed C', '80-90°F'),
+    (14, 'Seed D', '50-60°F'),
+    (15, 'Seed E', '70-80°F');
+SET IDENTITY_INSERT Seed OFF;
+GO
+
+SET IDENTITY_INSERT Tornado ON;
+INSERT INTO [dbo].[Tornado] ([TornadoID], [TornadoCategory])
+VALUES
+    (21, 1),
+    (22, 2),
+    (23, 3),
+    (24, 4),
+    (25, 5);
+SET IDENTITY_INSERT Tornado OFF;
+GO
