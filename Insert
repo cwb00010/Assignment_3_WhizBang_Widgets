@@ -1,0 +1,43 @@
+INSERT INTO [dbo].[City] ([City], [State], [Country], [ZipCode])
+VALUES 
+    ('New York City', 'New York', 'USA', 10001),
+    ('Los Angeles', 'California', 'USA', 90001),
+    ('Chicago', 'Illinois', 'USA', 60601),
+    ('Houston', 'Texas', 'USA', 77001),
+    ('Miami', 'Florida', 'USA', 33101);
+
+-- Insert mock data into User table
+INSERT INTO [dbo].[User] ([CityID], [UserName], [FarmType])
+VALUES
+    (1, 'John Doe', 'Dairy'),
+    (2, 'Jane Smith', 'Vegetables'),
+    (3, 'Bob Johnson', 'Meat'),
+    (4, 'Alice Brown', 'Dairy'),
+    (5, 'Charlie Davis', 'Vegetables');
+
+-- Insert mock data into Hurricane table
+INSERT INTO [dbo].[Hurricane] ([HurricaneName])
+VALUES
+    ('Hurricane A'),
+    ('Hurricane B'),
+    ('Hurricane C'),
+    ('Hurricane D'),
+    ('Hurricane E');
+
+-- Insert mock data into Seed table
+INSERT INTO [dbo].[Seed] ([SeedName], [IdealPlantTemp])
+VALUES
+    ('Seed A', '70-80°F'),
+    ('Seed B', '60-70°F'),
+    ('Seed C', '80-90°F'),
+    ('Seed D', '50-60°F'),
+    ('Seed E', '70-80°F');
+
+-- Insert mock data into Tornado table
+INSERT INTO [dbo].[Tornado] ([TornadoCategory])
+VALUES
+    (1),
+    (2),
+    (3),
+    (4),
+    (5);
