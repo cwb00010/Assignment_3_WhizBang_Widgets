@@ -1,14 +1,4 @@
-CREATE PROCEDURE InsertSeed InsertSeed
-    @SeedName NVARCHAR(100),
-    @IdealPlantTemperature FLOAT
-AS
-BEGIN
-    -- Insert the provided data into the Seed table
-    INSERT INTO Seed (SeedName, IdealPlantTemperature)
-    VALUES (@SeedName, @IdealPlantTemperature);
 
-    -- Print a success message
-    PRINT 'Seed inserted successfully.';
 END;
 CREATE PROCEDURE InsertHurricane
     @HurricaneID INT,
@@ -21,4 +11,16 @@ BEGIN
 
     -- Print a success message
     PRINT 'Hurricane inserted successfully.';
+END;
+CREATE PROCEDURE InsertTornado
+    @TornadoID INT,
+    @TornadoCategory INT
+AS
+BEGIN
+    -- Insert the provided data into the Tornado table
+    INSERT INTO Tornado (TornadoID, TornadoCategory)
+    VALUES (@TornadoID, @TornadoCategory);
+
+    -- Print a success message
+    PRINT 'Tornado inserted successfully.';
 END;
